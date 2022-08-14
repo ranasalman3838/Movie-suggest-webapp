@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quick Quiz - Play</title>
+    <link rel="icon " href="static/img/movie.jpg">
+    <link rel="stylesheet" href="{% static 'css/application.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <style>
+    .button {
+      background-color: #290e72;
+      border-radius: 5px;
+      /* width: 16%; */
+      text-align: center;
+      color: #FFFFFF;
+      padding: 14px;
+      font-family: 'Source Sans Pro', sans-serif;
+      display: inline-block;
+      font-size: 20px;
+      box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+  }
+  .mt-200{
+      margin-top:200px;
+  }
+  
+  .button:active {
+    border: 1px solid #130c45;
+    background-color: #15043f;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, .8), inset -1px -1px 1px rgba(255, 255, 255, .4);
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+  }
+  .button:hover {
+    background-color: #05286d;
+    color:#fff;
+  }
+  .p1{
+    color:black;
+  }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid"> <a class="navbar-brand" href="#">Movie Recommender</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                  <li class="nav-item"> <a class="nav-link active" aria-current="page" href="{% url 'start' %}">Home</a> </li>
+                  
+                  
+              </ul>
+         <h2><a href="{% url 'start' %}"></a></h2>
+          </div>
+      </div>
+  </nav>
+    <div class="container">
+      <div id="game" class="justify-center flex-column">
+        <div id="hud">
+          <div id="hud-item">
+            <p id="progressText" class="hud-prefix">
+              Question
+            </p>
+            <div id="progressBar">
+              <div id="progressBarFull"></div>
+            </div>
+          </div>
+          <div id="hud-item">
+            <h1 class="hud-main-text" id="score">
+
+            </h1>
+          </div>
+        </div>
+        <h2 id="question">What is the answer to this questions?</h2>
+        <div class="choice-container">
+          <p class="choice-prefix">A</p>
+          <p class="choice-text p1" data-number="1">Choice 1</p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">B</p>
+          <p class="choice-text p1" data-number="2">Choice 2</p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">C</p>
+          <p class="choice-text p1" data-number="3">Choice 3</p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">D</p>
+          <p class="choice-text p1" data-number="4">Choice 4</p>
+        </div>
+      </div>
+    </div>
+    <form action="GET">
+      <input type="text">
+    </form>
+
+    <center><button><a class="button" href="{% url 'movies' %}">Check Movies</a></button></center>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+
+
+  
+
