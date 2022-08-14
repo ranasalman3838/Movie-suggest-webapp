@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Document</title>
+  <link rel="shortcut icon" href="static/img/create.png">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/application.css' %}" />
+</head>
+<body style="background-image: linear-gradient(to left top,#07091c,#124FEB);">
+
+  <nav style="height:65px;" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid"> <a class="navbar-brand" style="font-size:2.25rem;" href="#">Movie Recommender</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item"> <a class="nav-link active" style="font-size:1.5rem ;" aria-current="page" href="{% url 'start' %}">Home</a> </li>
+                
+                
+            </ul>
+            <!-- <h2><a href="{% url 'start' %}"></a></h2> -->
+        </div>
+    </div>
+</nav>
+  <div class="container " style="background-image: linear-gradient(to left top,#07091c,#124FEB)">
+  <div class="card mb-3" style="width:100%;height: 300px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="static/img/movie.jpg" class="card-img" style="height: 300px;"  alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          <h1> Movie According to your choice</h1>
+          <a class="btn" href="{% url 'index' %}">Start Your Quiz</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+  
+</body>
+</html>
